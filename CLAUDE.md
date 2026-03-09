@@ -39,3 +39,29 @@ No test framework is configured.
 **Custom colors:** `yellow: #e7d393`, `white-100: #efefef`, black background throughout
 
 **ESLint** uses flat config format (`eslint.config.js`). Unused vars starting with uppercase or underscore are allowed.
+## Git Workflow
+
+### Branching
+- Always create a new branch before making changes; never commit to main
+- Branch naming: `feat/short-description`, `fix/bug-name`, `refactor/what-changed`
+
+### Commits
+- Use conventional commits format: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`
+- Write commit messages in present tense: "add login form" not "added login form"
+- Keep commits atomic — one logical change per commit
+
+### Pull Requests
+- Always push to a branch and open a PR; never push directly to main
+- PR titles follow the same conventional commit format
+- Run tests before committing: `npm test`
+- Run typecheck before committing: `npm run typecheck`
+
+## Git Safety Rules
+- NEVER push directly to main or master
+- NEVER force push (git push --force) without explicit permission
+- ALWAYS run tests before committing: npm test
+- ALWAYS run typecheck before committing: npm run typecheck
+- If tests fail, fix them before committing — do not commit broken code
+- Ask for confirmation before opening a PR
+
+
